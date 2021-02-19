@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import ApiFetch from './components/ApiFetch';
+// import Basic2 from './components/Basic2';
+// import BasicUseEffect from './components/BasicUseEffect';
+// import TimerContainer from './components/TimerContainer';
+import AppContext from './contexts/AppContext';
+import B from './components/B';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContext.Provider value={'value from App.js'}>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          {/* <Basic2 /> */}
+          {/* <BasicUseEffect /> */}
+          {/* <TimerContainer /> */}
+          <ApiFetch />
+          <B />
+
+        </header>
+      </div>
+    </AppContext.Provider> 
   );
 }
 
